@@ -3,7 +3,7 @@ local opt = vim.opt
 -- system
 opt.clipboard = "unnamedplus"
 opt.mouse = 'a'
-opt.updatetime = 250
+opt.updatetime = 50
 opt.timeoutlen = 300
 opt.termguicolors = true
 opt.modifiable = true
@@ -16,7 +16,6 @@ opt.number = true
 opt.relativenumber = true
 opt.signcolumn = "yes"
 opt.scrolloff = 8
-opt.sidescrolloff = 8
 opt.iskeyword:append('-')
 opt.cursorline = true
 
@@ -38,7 +37,8 @@ opt.backup = false
 opt.writebackup = false
 
 -- search
-opt.hlsearch = true
+opt.hlsearch = false
+opt.incsearch = true
 opt.ignorecase = true
 opt.smartcase = true
 
