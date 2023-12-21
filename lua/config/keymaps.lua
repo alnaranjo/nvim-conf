@@ -56,4 +56,3 @@ vim.keymap.set('t', '<C-h>', '<C-\\><C-N><C-w>h', terminal_opts)
 vim.keymap.set('t', '<C-j>', '<C-\\><C-N><C-w>j', terminal_opts)
 vim.keymap.set('t', '<C-k>', '<C-\\><C-N><C-w>k', terminal_opts)
 vim.keymap.set('t', '<C-l>', '<C-\\><C-N><C-w>l', terminal_opts)
-

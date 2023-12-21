@@ -45,4 +45,3 @@ opt.smartcase = true
 -- splitting
 opt.splitbelow = true
 opt.splitright = true
-

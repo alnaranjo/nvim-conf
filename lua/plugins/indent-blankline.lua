@@ -3,6 +3,13 @@ return {
     lazy = false,
     main = 'ibl',
     config = function()
-        require('ibl').setup()
+        require('ibl').setup({
+            indent = {
+                char = '┊'
+            },
+            whitespace = {
+                remove_blankline_trail = true
+            }
+        })
     end
 }

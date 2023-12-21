@@ -1,7 +1,20 @@
 return {
     {
+        'neovim/nvim-lspconfig',
+        lazy = false,
+        dependencies = {
+            'williamboman/mason.nvim',
+            'williamboman/mason-lspconfig.nvim',
+        },
+        config = function()
+            local lspconfig = require('lspconfig')
+
+            -- Lua
+            lspconfig.lua_ls.setup({})
+        end
+    },
+    {
         'williamboman/mason.nvim',
-        event = "BufReadPre",
         config = function()
             require('mason').setup({
                 ui = {
@@ -16,10 +29,6 @@ return {
     },
     {
         'williamboman/mason-lspconfig.nvim',
-        event = 'BufReadPre',
-        dependencies = {
-            'williamboman/mason.nvim',
-        },
         opts = {
             ensure_installed = {
                 'lua_ls'
@@ -27,13 +36,4 @@ return {
             automatic_installation = true
         }
     },
-    {
-        'neovim/nvim-lspconfig',
-        config = function()
-            local lspconfig = require('lspconfig')
-
-            -- Lua 
-            lspconfig.lua_ls.setup({})
-        end
-    }
 }
