@@ -2,21 +2,21 @@ local opt = vim.opt
 
 -- system
 opt.clipboard = "unnamedplus"
-opt.mouse = 'a'
+opt.mouse = "a"
 opt.updatetime = 50
 opt.timeoutlen = 300
 opt.termguicolors = true
 opt.modifiable = true
 
 -- completion
-opt.completeopt = 'menuone,noselect'
+opt.completeopt = "menuone,noselect"
 
 -- editor
 opt.number = true
 opt.relativenumber = true
 opt.signcolumn = "yes"
 opt.scrolloff = 8
-opt.iskeyword:append('-')
+opt.iskeyword:append("-")
 opt.cursorline = true
 
 -- indentation

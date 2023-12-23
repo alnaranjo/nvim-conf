@@ -7,7 +7,7 @@ return {
         },
         opts = {
             filters = {
-                dotfiles = true
+                dotfiles = false
             }
         }
     },
