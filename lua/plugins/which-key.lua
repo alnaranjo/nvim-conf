@@ -5,5 +5,4 @@ return {
         vim.opt.timeout = true
         vim.opt.timeoutlen = 300
     end,
-    opts = {}
 }

@@ -1,3 +1,11 @@
 return {
-	"folke/neoconf.nvim",
+    {
+        "folke/neoconf.nvim",
+        dependencies = {
+            "folke/neodev.nvim",
+        },
+    },
+    {
+        "folke/neodev.nvim",
+    },
 }
