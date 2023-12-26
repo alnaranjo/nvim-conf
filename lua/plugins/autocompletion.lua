@@ -2,20 +2,16 @@ return {
 	"hrsh7th/nvim-cmp",
 	lazy = false,
 	dependencies = {
-		"neovim/nvim-lspconfig",
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
+		-- Snippets
+		"L3MON4D3/LuaSnip",
+		"saadparwaiz1/cmp_luasnip",
+		"rafamadriz/friendly-snippets",
 
 		-- Adds LSP completion capabilities
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-nvim-lua",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
-
-		-- Snippets
-		"L3MON4D3/LuaSnip",
-		"saadparwaiz1/cmp_luasnip",
-		"rafamadriz/friendly-snippets",
 	},
 	config = function()
 		local cmp = require("cmp")

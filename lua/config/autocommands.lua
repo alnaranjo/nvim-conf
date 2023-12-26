@@ -4,7 +4,7 @@ local keymap = vim.keymap
 local lsp = vim.lsp
 
 api.nvim_create_autocmd("LspAttach", {
-	group = api.nvim_create_augroup("UserLspConfig", {}),
+	group = api.nvim_create_augroup("Lsp", {}),
 	callback = function(ev)
 		-- Enabla completeion triggered by <C-x><C-o>
 		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
@@ -29,15 +29,9 @@ api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
--- format on save
-api.nvim_create_autocmd("BufWritePost", {
-	group = api.nvim_create_augroup("LspFormattingGroup", {}),
+api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+	group = api.nvim_create_augroup("Lint", { clear = true }),
 	callback = function()
-		local efm = lsp.get_active_clients({ name = "efm" })
-		if vim.tbl_isempty(efm) then
-			return
-		end
-
-		lsp.buf.format({ async = true })
+		require("lint").try_lint()
 	end,
 })

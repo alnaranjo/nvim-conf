@@ -24,9 +24,11 @@ return {
 					"css",
 				},
 				auto_install = true,
+				ignore_install = {},
+				sync_install = false,
+				modules = {},
 				highlight = {
 					enable = true,
-					additional_vim_regex_highjlighting = true,
 				},
 				indent = { enable = true },
 				autotag = { enable = true },
