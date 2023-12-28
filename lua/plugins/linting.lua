@@ -10,6 +10,8 @@ return {
 			javascriptreact = { "eslint" },
 			typescriptreact = { "eslint" },
 			svelete = { "eslint" },
+			bash = { "shellcheck" },
+			c = { "clang" },
 		}
 
 		vim.keymap.set("n", "<leader>l", function()

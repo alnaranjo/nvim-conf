@@ -38,6 +38,7 @@ return {
 			clangd = {},
 			tsserver = {},
 			html = {},
+			bashls = {},
 		}
 
 		require("neodev").setup()
@@ -67,9 +68,12 @@ return {
 				--linters
 				"luacheck",
 				"eslint",
+				"shellcheck",
 				--formatters
 				"stylua",
+				"clang-format",
 				"prettier",
+				"shfmt",
 			},
 		})
 	end,

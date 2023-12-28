@@ -34,12 +34,6 @@ vim.keymap.set("n", "<leader>j", vim.diagnostic.goto_next, opts)
 vim.keymap.set("n", "<leader>k", vim.diagnostic.goto_prev, opts)
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
 
--- window navigation
-vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
-vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
-vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
-vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
-
 -- window resize
 vim.keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", opts)
 vim.keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", opts)

@@ -16,11 +16,13 @@ return {
 				yaml = { "prettier" },
 				markdown = { "prettier" },
 				graphql = { "prettier" },
+				bash = { "shfmt" },
+				c = "clangformat",
 			},
 			format_on_save = {
 				lsp_fallback = true,
 				async = true,
-				timeout_ms = 250,
+				timeout_ms = 500,
 			},
 		})
 	end,
