@@ -24,7 +24,7 @@ local opts = {
 		colorscheme = { "kanagawa-dragon" },
 	},
 	change_detection = {
-		notify = true,
+		notify = false,
 	},
 	performance = {
 		rtp = {

@@ -16,7 +16,6 @@ return {
 			})
 		end,
 	},
-	{ "nvim-lua/plenary.nvim" },
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
 		lazy = false,
