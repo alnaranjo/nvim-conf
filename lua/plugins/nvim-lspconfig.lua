@@ -53,7 +53,7 @@ return {
             cssls = {},
             jsonls = {},
             yamlls = {},
-            bashls = {},
+            bashls = {} 
         }
 
         require("neodev").setup()

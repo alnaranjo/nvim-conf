@@ -18,6 +18,7 @@ return {
                     "json",
                     "yaml",
                     "bash",
+                    "make",
                     "gitignore",
                     "dockerfile",
                     "markdown",
