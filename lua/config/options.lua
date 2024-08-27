@@ -1,47 +1,46 @@
-local opt = vim.opt
 
 -- system
-opt.clipboard = "unnamedplus"
-opt.mouse = "a"
-opt.updatetime = 50
-opt.timeoutlen = 300
-opt.termguicolors = true
-opt.modifiable = true
+vim.opt.clipboard = "unnamedplus"
+vim.opt.mouse = "a"
+vim.opt.updatetime = 50
+vim.opt.timeoutlen = 300
+vim.opt.termguicolors = true
+vim.opt.modifiable = true
 
 -- completion
-opt.completeopt = "menuone,noselect"
+vim.opt.completeopt = "menuone,noselect"
 
 -- editor
-opt.number = true
-opt.relativenumber = true
-opt.signcolumn = "yes"
-opt.scrolloff = 8
-opt.iskeyword:append("-")
-opt.cursorline = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.signcolumn = "yes"
+vim.opt.scrolloff = 8
+vim.opt.iskeyword:append("-")
+vim.opt.cursorline = true
 
 -- indentation
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
-opt.showtabline = 4
-opt.numberwidth = 4
-opt.expandtab = true
-opt.smartindent = true
-opt.wrap = false
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.showtabline = 4
+vim.opt.numberwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.wrap = false
 
 -- file
-opt.fileencoding = "utf-8"
-opt.swapfile = false
-opt.undofile = true
-opt.backup = false
-opt.writebackup = false
+vim.opt.fileencoding = "utf-8"
+vim.opt.swapfile = false
+vim.opt.undofile = true
+vim.opt.backup = false
+vim.opt.writebackup = false
 
 -- search
-opt.hlsearch = false
-opt.incsearch = true
-opt.ignorecase = true
-opt.smartcase = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- splitting
-opt.splitbelow = true
-opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true

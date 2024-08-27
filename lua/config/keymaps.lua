@@ -9,18 +9,6 @@ vim.keymap.set("n", "<leader>sv", "<cmd>vsplit<cr>", opts)
 vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", opts)
 vim.keymap.set("n", "<leader>M", "<cmd>Mason<cr>", opts)
 
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
-vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
-vim.keymap.set("n", "<leader>fh", "<cmd>Telescope.help_tags<cr>", opts)
-
--- debugging
-vim.keymap.set("n", "<leader>dt", function()
-	require("dapui").toggle()
-end, opts)
-vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", opts)
-vim.keymap.set("n", "<leader>dc", "<cmd>DapContinue<cr>", opts)
-
 -- text manipulation
 vim.keymap.set("n", "J", "mzJ`z", opts)
 vim.keymap.set("v", "J", "<cmd>move '>+1<cr>gv-gv", opts)
@@ -36,7 +24,7 @@ vim.keymap.set("n", "<leader>d", '"_d', opts)
 vim.keymap.set("v", "<leader>d", '"_d', opts)
 
 -- diagnostics
--- vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, opts)
 vim.keymap.set("n", "<leader>j", vim.diagnostic.goto_next, opts)
 vim.keymap.set("n", "<leader>k", vim.diagnostic.goto_prev, opts)
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)

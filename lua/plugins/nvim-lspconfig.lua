@@ -19,11 +19,13 @@ return {
                 -- linters
                 "luacheck", --lua
                 "cfn-lint", -- cloudformation
+
                 -- formatters
                 "clang-format", -- c/c++
-                "prettier", -- js/ts
+                "prettier",     -- js/ts
+
                 -- debuggers
-                "codelldb", -- c/c++
+                "codelldb",         -- c/c++
                 "js-debug-adapter", -- js/ts
             },
         })
@@ -53,7 +55,7 @@ return {
             cssls = {},
             jsonls = {},
             yamlls = {},
-            bashls = {} 
+            bashls = {}
         }
 
         require("neodev").setup()
