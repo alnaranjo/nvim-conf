@@ -4,7 +4,7 @@ return {
     dependencies = {
         "nvim-tree/nvim-web-devicons",
     },
-    otps = {
+    opts = {
             filters = {
                 dotfiles = false,
             },
