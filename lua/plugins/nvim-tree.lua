@@ -4,12 +4,10 @@ return {
     dependencies = {
         "nvim-tree/nvim-web-devicons",
     },
-    config = function()
-        local tree = require('nvim-tree')
-        tree.setup({
+    otps = {
             filters = {
                 dotfiles = false,
             },
-        })
-    end
+
+    }
 }
