@@ -5,9 +5,11 @@ return {
         "nvim-tree/nvim-web-devicons",
     },
     opts = {
-            filters = {
-                dotfiles = false,
-            },
-
+        filters = {
+            dotfiles = false,
+        },
+        update_focused_file = {
+            enable = true
+        }
     }
 }
