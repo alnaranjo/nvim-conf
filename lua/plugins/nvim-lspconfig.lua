@@ -48,7 +48,7 @@ return {
                 },
             },
             clangd = {},
-            tsserver = {},
+            ts_ls = {},
             eslint = {},
             tailwindcss = {},
             html = {},
