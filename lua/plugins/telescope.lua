@@ -11,12 +11,26 @@ return {
 
             telescope.setup({
                 defaults = {
-                    file_patterns = {
+                    find_files = {
+                        hidden = false
+                    },
+                    file_ignore_patterns = {
                         '.next',
                         'dist',
                         'node_modules',
                         'pnpm-lock.yaml',
-                    }
+                    },
+                    vimgrep_arguments = {
+                        'rg',
+                        '--color=never',
+                        '--no-heading',
+                        '--with-filename',
+                        '--line-number',
+                        '--column',
+                        '--smart-case',
+                        '--hidden',
+                        '--glob=!.git'
+                    },
                 },
                 extensions = {
                     ["ui-select"] = {

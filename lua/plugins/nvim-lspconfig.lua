@@ -55,7 +55,6 @@ return {
             cssls = {},
             jsonls = {},
             yamlls = {},
-            bashls = {}
         }
 
         require("neodev").setup()
@@ -66,17 +65,6 @@ return {
         local mason_lspconfig = require("mason-lspconfig")
         mason_lspconfig.setup({
             ensure_installed = vim.tbl_keys(servers),
-        })
-
-        mason_lspconfig.setup_handlers({
-            function(server_name)
-                require("lspconfig")[server_name].setup({
-                    capabilities = capabilities,
-                    settings = servers[server_name],
-                    filetypes = (servers[server_name] or {}).filetypes,
-                    root_dir = (servers[server_name] or {}).root_dir,
-                })
-            end,
         })
     end,
 }
