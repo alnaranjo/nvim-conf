@@ -8,6 +8,8 @@ vim.keymap.set("n", "<leader>sv", "<cmd>vsplit<cr>", opts)
 
 vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", opts)
 vim.keymap.set("n", "<leader>M", "<cmd>Mason<cr>", opts)
+vim.keymap.set("n", "<leader>G", "<cmd>vertical G<cr>", opts)
+vim.keymap.set("n", "<leader>z", "<cmd>tab split<cr>", opts)
 
 -- text manipulation
 vim.keymap.set("n", "J", "mzJ`z", opts)
