@@ -12,7 +12,7 @@ return {
             enable = true
         },
         view = {
-            width = 60
+            width = 50
         }
     }
 }
