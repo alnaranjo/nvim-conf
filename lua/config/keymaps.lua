@@ -1,35 +1,38 @@
-local opts = { noremap = true, silent = true }
 local terminal_opts = { silent = true }
+local opts          = { noremap = true, silent = true }
+
+function generate_opts(desc)
+    desc = desc or ""
+    return { desc = desc, noremap = true, silent = true }
+end
 
 -- leader key
-vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
-vim.keymap.set("n", "<leader>sh", "<cmd>split<cr>", opts)
-vim.keymap.set("n", "<leader>sv", "<cmd>vsplit<cr>", opts)
+vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", generate_opts("explorer"))
+vim.keymap.set("n", "<leader>sh", "<cmd>split<cr>", generate_opts("split horizontal"))
+vim.keymap.set("n", "<leader>sv", "<cmd>vsplit<cr>", generate_opts("split vertical"))
 
-vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", opts)
-vim.keymap.set("n", "<leader>M", "<cmd>Mason<cr>", opts)
-vim.keymap.set("n", "<leader>G", "<cmd>vertical G<cr>", opts)
-vim.keymap.set("n", "<leader>z", "<cmd>tab split<cr>", opts)
+vim.keymap.set('n', '<leader>D', vim.diagnostic.open_float, generate_opts("open diagnostics"))
+vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", generate_opts("open lazy"))
+vim.keymap.set("n", "<leader>M", "<cmd>Mason<cr>", generate_opts("open mason"))
+vim.keymap.set("n", "<leader>G", "<cmd>vertical G<cr>", generate_opts("open git"))
+vim.keymap.set("n", "<leader>z", "<cmd>tab split<cr>", generate_opts("zoom"))
 
+-- cut, copy, paste
+vim.keymap.set("n", "<leader>y", '"+y', generate_opts("yank"))
+vim.keymap.set("v", "<leader>y", '"+y', generate_opts("yank"))
+vim.keymap.set("x", "<leader>p", '"_dP', generate_opts("paste"))
+vim.keymap.set("n", "<leader>d", '"_d', generate_opts(""))
+vim.keymap.set("v", "<leader>d", '"_d', generate_opts())
+
+-- diagnostics navigation
+vim.keymap.set("n", "<leader>j", vim.diagnostic.goto_next, generate_opts())
+vim.keymap.set("n", "<leader>k", vim.diagnostic.goto_prev, generate_opts())
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, generate_opts())
+--
 -- text manipulation
 vim.keymap.set("n", "J", "mzJ`z", opts)
 vim.keymap.set("v", "J", "<cmd>move '>+1<cr>gv-gv", opts)
 vim.keymap.set("v", "K", "<cmd>move '<-2<cr>gv-gv", opts)
-
-vim.keymap.set("n", "<leader>y", '"+y', opts)
-vim.keymap.set("v", "<leader>y", '"+y', opts)
-vim.keymap.set("n", "<leader>Y", '"+Y', opts)
-
-vim.keymap.set("x", "<leader>p", '"_dP', opts)
-
-vim.keymap.set("n", "<leader>d", '"_d', opts)
-vim.keymap.set("v", "<leader>d", '"_d', opts)
-
--- diagnostics
-vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, opts)
-vim.keymap.set("n", "<leader>j", vim.diagnostic.goto_next, opts)
-vim.keymap.set("n", "<leader>k", vim.diagnostic.goto_prev, opts)
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
 
 -- window resize
 vim.keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", opts)
